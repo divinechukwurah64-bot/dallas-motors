@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallas Motors — Every Drive. Every Driver.</title>
+<meta name="description" content="Dallas Motors is a full-line dealership carrying sedans, SUVs, trucks, sports cars, electric vehicles and luxury models — new, certified, and pre-owned.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/vehicles.css">
+<link rel="stylesheet" href="css/loader.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div id="loadingScreen" class="loading-screen">
+  <div class="loading-inner">
+    <svg class="loading-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L3 9v14l13 7 13-7V9L16 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 2v27M3 9l13 7 13-7" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <div class="loading-wordmark">Dallas Motors</div>
+    <div class="loading-bar"><i></i></div>
+    <div class="loading-hint">Tap to start the engine</div>
+  </div>
+  <audio id="engineSound" preload="auto">
+    <source src="https://soundbible.com/grab.php?id=2209&type=mp3" type="audio/mpeg">
+  </audio>
+</div>
+<script src="js/loader.js"></script>
+
+
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name-script">Dallas Motors</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="inventory.html" class="btn btn-primary btn-sm">Browse inventory</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu glass">
+  <a href="index.html">Home</a>
+  <a href="inventory.html">Inventory</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="inventory.html" class="btn btn-primary btn-block">Browse inventory</a>
+</div>
+
+<main id="main">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1767907571229-01cf4ba03590?q=80&w=1600&auto=format&fit=crop"
+        style="width:100%;height:100%;object-fit:cover;opacity:0.38">
+        <source src="https://videos.pexels.com/video-files/13643105/13643105-uhd_2560_1440_24fps.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-kicker">Full-line dealership · new · certified · pre-owned</div>
+        <h1>Every drive.<br><em>Every driver.</em></h1>
+        <p class="hero-sub">Sedans, SUVs, trucks, electric, sports, and luxury — one lot, one standard of inspection, real prices up front.</p>
+        <div class="hero-ctas">
+          <a href="inventory.html" class="btn btn-primary" id="heroCta">Browse inventory</a>
+          <a href="about.html" class="btn btn-glass">How we work</a>
+        </div>
+
+        <div class="glass hero-quickfind">
+          <div class="qf-title">Find your next vehicle</div>
+          <form id="quickFindForm">
+            <div class="qf-row">
+              <select id="qfType" class="field-select" style="grid-column:span 1">
+                <option value="">Any body type</option>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="truck">Truck</option>
+                <option value="sports">Sports</option>
+                <option value="electric">Electric</option>
+                <option value="luxury">Luxury</option>
+              </select>
+              <select id="qfBudget">
+                <option value="">Any budget</option>
+                <option value="30000">Under $30,000</option>
+                <option value="45000">Under $45,000</option>
+                <option value="70000">Under $70,000</option>
+                <option value="130000">Under $130,000</option>
+              </select>
+              <button type="submit" class="btn btn-primary btn-block">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="glass hud">
+        <div class="hud-top">
+          <div class="hud-id">DALLAS // UNIT 04A<br>STATUS: IN STOCK</div>
+          <span class="chip chip-red">Featured</span>
+        </div>
+        <div class="hud-photo">
+          <img src="https://images.unsplash.com/photo-1767907571229-01cf4ba03590?q=80&w=800&auto=format&fit=crop" alt="Corsira GT3, featured sports car">
+        </div>
+        <div class="hud-readout">
+          <div class="hud-stat"><b>512</b><span>Horsepower</span><div class="hud-bar"><i style="width:88%"></i></div></div>
+          <div class="hud-stat"><b>3.1s</b><span>0–60 mph</span><div class="hud-bar"><i style="width:94%"></i></div></div>
+          <div class="hud-stat"><b>205</b><span>Top speed</span><div class="hud-bar"><i style="width:76%"></i></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="eyebrow">Shop by body type</div>
+      <div class="section-head">
+        <h2>Six categories, one certified standard</h2>
+        <p>Every category is stocked in new, certified pre-owned, and value trims.</p>
+      </div>
+      <div class="cat-grid" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Currently on the lot</div>
+          <h2>Featured vehicles</h2>
+        </div>
+        <a href="inventory.html" class="btn btn-ghost" id="featuredViewAll">View full inventory</a>
+      </div>
+      <div class="vehicle-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="section-tight">
+    <div class="container reveal">
+      <div class="stat-strip">
+        <div class="stat-cell"><span class="stat-num"><span>21</span> yrs</span><div class="stat-label">Serving drivers since 2003</div></div>
+        <div class="stat-cell"><span class="stat-num"><span>340</span>+</span><div class="stat-label">Vehicles in current inventory</div></div>
+        <div class="stat-cell"><span class="stat-num"><span>150</span>-pt</span><div class="stat-label">Certified inspection, every unit</div></div>
+        <div class="stat-cell"><span class="stat-num"><span>4.8</span>/5</span><div class="stat-label">Average buyer rating</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALUES ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Why buy from Dallas</div>
+          <h2>Transparent pricing, real inspections</h2>
+        </div>
+      </div>
+      <div class="value-grid">
+        <div class="glass value-card reveal">
+          <span class="value-icon"></span>
+          <h4>No hidden fees</h4>
+          <p>The price on the card is the price at the counter. We publish market comps for every listing.</p>
+        </div>
+        <div class="glass value-card reveal">
+          <span class="value-icon"></span>
+          <h4>150-point inspection</h4>
+          <p>Every vehicle, new or pre-owned, clears our certified checklist before it's listed for sale.</p>
+        </div>
+        <div class="glass value-card reveal">
+          <span class="value-icon"></span>
+          <h4>Financing that fits</h4>
+          <p>Estimate payments on any listing instantly, then finish paperwork with our finance team same-day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">From recent buyers</div>
+          <h2>Trusted by drivers across the region</h2>
+        </div>
+      </div>
+      <div class="testi-grid" id="testiGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="glass cta-band reveal">
+        <div class="eyebrow" style="justify-content:center">Visit the lot</div>
+        <h2>Ready to see it in person?</h2>
+        <p>Book a test drive online in under a minute, or stop by — our team will have the vehicle pulled up front.</p>
+        <div class="cta-band-actions">
+          <a href="contact.html" class="btn btn-primary">Book a test drive</a>
+          <a href="inventory.html" class="btn btn-glass">Browse inventory</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark"></span><span class="brand-name-script">Dallas Motors</span></a>
+        <p>A full-line dealership carrying every body type — new, certified, and pre-owned — with transparent pricing on every unit.</p>
+        <div class="footer-social" id="footerSocial"></div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="inventory.html?type=sedan">Sedans</a></li>
+          <li><a href="inventory.html?type=suv">SUVs</a></li>
+          <li><a href="inventory.html?type=truck">Trucks</a></li>
+          <li><a href="inventory.html?type=electric">Electric</a></li>
+          <li><a href="inventory.html?type=sports">Sports</a></li>
+          <li><a href="inventory.html?type=luxury">Luxury</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="inventory.html">Full inventory</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li>1420 Constitution Avenue, Abuja</li>
+          <li>Mon–Sat, 9:00 – 19:00</li>
+          <li>+234 800 555 0142</li>
+          <li id="footerEmail">hello@dallasmotors.example</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="js-year"></span> Dallas Motors. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy policy</a>
+        <a href="terms.html">Terms of sale</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+<script>
+  // inject icon-driven bits that need JS
+  document.querySelectorAll(".brand-mark").forEach(el => el.innerHTML = ICON.logo);
+  document.getElementById("heroCta").innerHTML = "Browse inventory " + ICON.arrowRight;
+  document.getElementById("featuredViewAll").innerHTML = "View full inventory " + ICON.arrowRight;
+
+  const categories = [
+    { type:"sedan", label:"Sedans", desc:"24 in stock" },
+    { type:"suv", label:"SUVs", desc:"31 in stock" },
+    { type:"truck", label:"Trucks", desc:"18 in stock" },
+    { type:"sports", label:"Sports", desc:"12 in stock" },
+    { type:"electric", label:"Electric", desc:"22 in stock" },
+    { type:"luxury", label:"Luxury", desc:"15 in stock" },
+  ];
+  document.getElementById("categoryGrid").innerHTML = categories.map(c => `
+    <a href="inventory.html?type=${c.type}" class="glass cat-tile reveal" style="background-image:url('${photoUrl(c.type,{w:500})}')">
+      ${CAT_ICON[c.type]}
+      <div><h4>${c.label}</h4><span>${c.desc}</span></div>
+    </a>`).join("");
+
+  const testimonials = [
+    { name:"Amaka O.", role:"Kestrel LM Sedan owner", quote:"Picked the trim on inventory.html, financed it same afternoon. Zero surprise fees at pickup." },
+    { name:"Tunde B.", role:"Draven Trailhead owner", quote:"The inspection report was more thorough than I expected for a used SUV. Easy decision." },
+    { name:"Chidinma E.", role:"Solace Current One owner", quote:"First EV purchase — the team walked me through range and home charging before I signed anything." },
+  ];
+  document.getElementById("testiGrid").innerHTML = testimonials.map(t => `
+    <div class="glass testi-card reveal">
+      <div class="testi-stars">${ICON.star}${ICON.star}${ICON.star}${ICON.star}${ICON.star}</div>
+      <p>"${t.quote}"</p>
+      <div class="testi-person">
+        <div class="testi-avatar">${ICON.users}</div>
+        <div><b>${t.name}</b><span>${t.role}</span></div>
+      </div>
+    </div>`).join("");
+
+  const socials = ["facebook","instagram","xsocial","youtube"];
+  document.getElementById("footerSocial").innerHTML = socials.map(s => `<a href="#" aria-label="${s}">${ICON[s]}</a>`).join("");
+
+  document.querySelectorAll(".value-icon").forEach((el,i) => {
+    el.outerHTML = [ICON.shield, ICON.checkCircle, ICON.wrench][i];
+  });
+</script>
+</body>
+</html>

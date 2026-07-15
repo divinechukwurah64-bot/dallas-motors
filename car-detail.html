@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vehicle details — Dallas Motors</title>
+<meta name="description" content="Full specifications, features, and financing estimate for this vehicle at Dallas Motors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/vehicles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+
+
+<header class="nav">
+  <div class="nav-inner">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand"><span class="brand-mark"></span><span class="brand-name-script">Dallas Motors</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="inventory.html" class="btn btn-primary btn-sm">Browse inventory</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu glass">
+  <a href="index.html">Home</a>
+  <a href="inventory.html">Inventory</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="inventory.html" class="btn btn-primary btn-block">Browse inventory</a>
+</div>
+
+<main id="main">
+  <section class="detail-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span id="icoChevron1"></span>
+        <a href="inventory.html" id="breadcrumbType">Inventory</a>
+        <span id="icoChevron2"></span>
+        <span id="breadcrumbModel">Vehicle</span>
+      </div>
+
+      <div class="detail-layout">
+        <div>
+          <div class="glass gallery-main" id="galleryMain"></div>
+          <div class="gallery-thumbs" id="galleryThumbs"></div>
+
+          <div class="detail-tabs">
+            <button class="detail-tab active" data-tab="tabOverview">Overview</button>
+            <button class="detail-tab" data-tab="tabSpecs">Specifications</button>
+            <button class="detail-tab" data-tab="tabFeatures">Features</button>
+          </div>
+          <div class="tab-panel active" id="tabOverview">
+            <p id="overviewText"></p>
+          </div>
+          <div class="tab-panel" id="tabSpecs">
+            <div class="spec-table" id="specTable"></div>
+          </div>
+          <div class="tab-panel" id="tabFeatures">
+            <ul class="feature-list" id="featureList"></ul>
+          </div>
+        </div>
+
+        <aside>
+          <div class="glass" style="padding:28px; margin-bottom:20px">
+            <div id="vTags" style="display:flex; gap:6px; margin-bottom:14px; flex-wrap:wrap"></div>
+            <div class="detail-title-row">
+              <h1 id="vTitle"></h1>
+            </div>
+            <p id="vSub" style="margin-bottom:18px"></p>
+            <div class="detail-price" style="text-align:left; margin-bottom:18px">
+              <b id="vPrice" style="font-family:var(--font-mono); font-size:28px; color:var(--text)"></b>
+              <span style="display:block; font-size:12px; color:var(--text-faint)">Certified price, no hidden fees</span>
+            </div>
+            <div class="v-card-specs" id="vQuickSpecs" style="margin-bottom:22px"></div>
+            <div style="display:flex; gap:10px">
+              <a href="#" class="btn btn-primary btn-block" id="enquireLink">Enquire / book test drive</a>
+              <button class="btn btn-glass fav-toggle" id="favBtn" aria-label="Save to favorites" style="width:52px"></button>
+            </div>
+          </div>
+
+          <div class="glass side-panel">
+            <h3>Estimate your payment</h3>
+            <div class="field">
+              <label for="financeDown">Down payment</label>
+              <input type="number" id="financeDown" value="5000" min="0" step="500">
+            </div>
+            <div class="field">
+              <label for="financeTerm">Loan term</label>
+              <select id="financeTerm">
+                <option value="36">36 months</option>
+                <option value="48">48 months</option>
+                <option value="60" selected>60 months</option>
+                <option value="72">72 months</option>
+              </select>
+            </div>
+            <div class="finance-row"><span>Vehicle price</span><b id="financePrincipalLabel">—</b></div>
+            <div class="finance-row"><span>Amount financed</span><b id="financePrincipal">—</b></div>
+            <div class="finance-row"><span>Estimated APR</span><b>6.9%</b></div>
+            <div class="finance-total"><span>Est. monthly payment</span><b id="financeMonthly">$0</b></div>
+            <p style="font-size:12px; margin-top:12px">Estimate only. Final rate depends on credit approval and term selected at checkout.</p>
+          </div>
+
+          <div class="glass dealer-card">
+            <div class="dealer-avatar" id="dealerIcon"></div>
+            <div class="dealer-meta"><b>Sales Advisory Team</b><span>Typically replies within 1 hour</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">You might also like</div>
+          <h2>Similar vehicles</h2>
+        </div>
+        <a href="inventory.html" class="btn btn-ghost" id="viewAllLink">View full inventory</a>
+      </div>
+      <div class="vehicle-grid" id="similarGrid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark"></span><span class="brand-name-script">Dallas Motors</span></a>
+        <p>A full-line dealership carrying every body type — new, certified, and pre-owned — with transparent pricing on every unit.</p>
+        <div class="footer-social" id="footerSocial"></div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="inventory.html?type=sedan">Sedans</a></li>
+          <li><a href="inventory.html?type=suv">SUVs</a></li>
+          <li><a href="inventory.html?type=truck">Trucks</a></li>
+          <li><a href="inventory.html?type=electric">Electric</a></li>
+          <li><a href="inventory.html?type=sports">Sports</a></li>
+          <li><a href="inventory.html?type=luxury">Luxury</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="inventory.html">Full inventory</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li>1420 Constitution Avenue, Abuja</li>
+          <li>Mon–Sat, 9:00 – 19:00</li>
+          <li>+234 800 555 0142</li>
+          <li id="footerEmail">hello@dallasmotors.example</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="js-year"></span> Dallas Motors. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy policy</a>
+        <a href="terms.html">Terms of sale</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/detail.js"></script>
+<script>
+  document.querySelectorAll(".brand-mark").forEach(el => el.innerHTML = ICON.logo);
+  document.getElementById("icoChevron1").innerHTML = ICON.chevronRight;
+  document.getElementById("icoChevron2").innerHTML = ICON.chevronRight;
+  document.getElementById("favBtn").innerHTML = ICON.heart;
+  document.getElementById("dealerIcon").innerHTML = ICON.users;
+  document.getElementById("viewAllLink").innerHTML = "View full inventory " + ICON.arrowRight;
+
+  const params = new URLSearchParams(window.location.search);
+  const v = findVehicle(params.get("id")) || INVENTORY[0];
+  document.getElementById("financePrincipalLabel").textContent = formatPrice(v.price);
+
+  const socials = ["facebook","instagram","xsocial","youtube"];
+  document.getElementById("footerSocial").innerHTML = socials.map(s => `<a href="#" aria-label="${s}">${ICON[s]}</a>`).join("");
+</script>
+</body>
+</html>

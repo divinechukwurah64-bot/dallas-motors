@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory — Dallas Motors</title>
+<meta name="description" content="Browse the full Dallas Motors inventory: sedans, SUVs, trucks, sports cars, electric vehicles and luxury models.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/vehicles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+
+
+<header class="nav">
+  <div class="nav-inner">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand"><span class="brand-mark"></span><span class="brand-name-script">Dallas Motors</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Book a test drive</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu glass">
+  <a href="index.html">Home</a>
+  <a href="inventory.html">Inventory</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary btn-block">Book a test drive</a>
+</div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">340+ vehicles, updated daily</div>
+      <h1>Full inventory</h1>
+      <p>Filter by body type, make, fuel, or budget — every listing includes the 150-point certified inspection report.</p>
+    </div>
+  </section>
+
+  <section class="section-tight" style="padding-top:0">
+    <div class="container">
+
+      <div class="glass inv-toolbar">
+        <div class="inv-search">
+          <span id="invSearchIcon"></span>
+          <input type="search" id="invSearch" placeholder="Search make, model, or year…">
+        </div>
+        <div class="inv-count" id="invCount"></div>
+        <div class="inv-sort">
+          <select id="invSort">
+            <option value="relevance">Sort: Top rated</option>
+            <option value="price-asc">Price: Low to high</option>
+            <option value="price-desc">Price: High to low</option>
+            <option value="year-desc">Year: Newest first</option>
+            <option value="mileage-asc">Mileage: Lowest first</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="active-filters" id="activeFilters"></div>
+
+      <div class="inv-layout">
+        <aside class="glass filters">
+          <h3>Filters <button class="btn btn-ghost btn-sm" id="clearFilters">Clear all</button></h3>
+
+          <div class="filter-group">
+            <h4>Body type</h4>
+            <div id="filterTypes"></div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Budget</h4>
+            <div class="range-row">
+              <input type="range" id="priceRange" min="20000" max="130000" step="5000" value="130000">
+            </div>
+            <div class="range-values"><span>$20,000</span><span id="priceRangeVal">$130,000</span></div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Make</h4>
+            <div id="filterMakes"></div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Fuel type</h4>
+            <div id="filterFuels"></div>
+          </div>
+        </aside>
+
+        <div>
+          <div class="vehicle-grid" id="vehicleGrid"></div>
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark"></span><span class="brand-name-script">Dallas Motors</span></a>
+        <p>A full-line dealership carrying every body type — new, certified, and pre-owned — with transparent pricing on every unit.</p>
+        <div class="footer-social" id="footerSocial"></div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="inventory.html?type=sedan">Sedans</a></li>
+          <li><a href="inventory.html?type=suv">SUVs</a></li>
+          <li><a href="inventory.html?type=truck">Trucks</a></li>
+          <li><a href="inventory.html?type=electric">Electric</a></li>
+          <li><a href="inventory.html?type=sports">Sports</a></li>
+          <li><a href="inventory.html?type=luxury">Luxury</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="inventory.html">Full inventory</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li>1420 Constitution Avenue, Abuja</li>
+          <li>Mon–Sat, 9:00 – 19:00</li>
+          <li>+234 800 555 0142</li>
+          <li id="footerEmail">hello@dallasmotors.example</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="js-year"></span> Dallas Motors. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy policy</a>
+        <a href="terms.html">Terms of sale</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/inventory.js"></script>
+<script>
+  document.querySelectorAll(".brand-mark").forEach(el => el.innerHTML = ICON.logo);
+  document.getElementById("invSearchIcon").innerHTML = ICON.search;
+  const socials = ["facebook","instagram","xsocial","youtube"];
+  document.getElementById("footerSocial").innerHTML = socials.map(s => `<a href="#" aria-label="${s}">${ICON[s]}</a>`).join("");
+</script>
+</body>
+</html>

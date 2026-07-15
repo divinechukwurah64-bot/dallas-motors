@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Dallas Motors</title>
+<meta name="description" content="Book a test drive, ask about financing, or get in touch with an Dallas Motors advisor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/vehicles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+
+
+<header class="nav">
+  <div class="nav-inner">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand"><span class="brand-mark"></span><span class="brand-name-script">Dallas Motors</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="inventory.html" class="btn btn-primary btn-sm">Browse inventory</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu glass">
+  <a href="index.html">Home</a>
+  <a href="inventory.html">Inventory</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="inventory.html" class="btn btn-primary btn-block">Browse inventory</a>
+</div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">We reply within 1 business hour</div>
+      <h1>Talk to an advisor</h1>
+      <p>Book a test drive, ask about a specific vehicle, or get a financing estimate — no call center, just the team on the lot.</p>
+    </div>
+  </section>
+
+  <section class="section-tight" style="padding-top:0">
+    <div class="container contact-grid">
+      <div class="glass reveal" style="padding:32px" id="formPanel">
+        <h3 id="formTitle">Send us a message</h3>
+        <p id="formSub" style="margin-bottom:24px">Fill in a few details and an advisor will follow up by phone or email.</p>
+        <form id="contactForm">
+          <div class="field-row">
+            <div class="field"><label for="cfName">Full name</label><input id="cfName" type="text" placeholder="Jane Doe" required></div>
+            <div class="field"><label for="cfPhone">Phone number</label><input id="cfPhone" type="tel" placeholder="+234 800 000 0000" required></div>
+          </div>
+          <div class="field"><label for="cfEmail">Email address</label><input id="cfEmail" type="email" placeholder="jane@example.com" required></div>
+          <div class="field-row">
+            <div class="field">
+              <label for="cfReason">I'm interested in</label>
+              <select id="cfReason">
+                <option>Booking a test drive</option>
+                <option>A specific vehicle</option>
+                <option>Financing options</option>
+                <option>Trading in my vehicle</option>
+                <option>General question</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="cfVehicle">Vehicle of interest</label>
+              <select id="cfVehicle"><option value="">Not sure yet</option></select>
+            </div>
+          </div>
+          <div class="field"><label for="cfMessage">Message</label><textarea id="cfMessage" placeholder="Tell us a bit about what you're looking for…"></textarea></div>
+          <button class="btn btn-primary btn-block" type="submit">Send message</button>
+        </form>
+        <div id="formSuccess" style="display:none; text-align:center; padding: 20px 0">
+          <div style="color:var(--good); margin-bottom:14px" id="successIcon"></div>
+          <h3>Message sent</h3>
+          <p>An Dallas Motors advisor will reach out shortly. Thanks for getting in touch.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="glass contact-info-card reveal">
+          <span id="icoPin"></span>
+          <div><h4>Showroom address</h4><p>1420 Constitution Avenue, Central Business District, Abuja, Nigeria</p></div>
+        </div>
+        <div class="glass contact-info-card reveal">
+          <span id="icoPhone"></span>
+          <div><h4>Phone</h4><p>+234 800 555 0142</p></div>
+        </div>
+        <div class="glass contact-info-card reveal">
+          <span id="icoMail"></span>
+          <div><h4>Email</h4><p id="contactEmail">hello@dallasmotors.example</p></div>
+        </div>
+        <div class="glass contact-info-card reveal">
+          <span id="icoClock"></span>
+          <div><h4>Hours</h4><p>Monday–Saturday, 9:00–19:00. Closed Sundays &amp; public holidays.</p></div>
+        </div>
+
+        <div class="glass map-shell reveal" id="mapShell"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark"></span><span class="brand-name-script">Dallas Motors</span></a>
+        <p>A full-line dealership carrying every body type — new, certified, and pre-owned — with transparent pricing on every unit.</p>
+        <div class="footer-social" id="footerSocial"></div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="inventory.html?type=sedan">Sedans</a></li>
+          <li><a href="inventory.html?type=suv">SUVs</a></li>
+          <li><a href="inventory.html?type=truck">Trucks</a></li>
+          <li><a href="inventory.html?type=electric">Electric</a></li>
+          <li><a href="inventory.html?type=sports">Sports</a></li>
+          <li><a href="inventory.html?type=luxury">Luxury</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="inventory.html">Full inventory</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li>1420 Constitution Avenue, Abuja</li>
+          <li>Mon–Sat, 9:00 – 19:00</li>
+          <li>+234 800 555 0142</li>
+          <li id="footerEmail">hello@dallasmotors.example</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="js-year"></span> Dallas Motors. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy policy</a>
+        <a href="terms.html">Terms of sale</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.querySelectorAll(".brand-mark").forEach(el => el.innerHTML = ICON.logo);
+  document.getElementById("icoPin").innerHTML = ICON.pin;
+  document.getElementById("icoPhone").innerHTML = ICON.phone;
+  document.getElementById("icoMail").innerHTML = ICON.mail;
+  document.getElementById("icoClock").innerHTML = ICON.clock;
+  document.getElementById("successIcon").innerHTML = ICON.checkCircle;
+
+  // populate vehicle dropdown
+  const vehicleSelect = document.getElementById("cfVehicle");
+  vehicleSelect.innerHTML += INVENTORY.map(v => `<option value="${v.id}">${v.make} ${v.model} — ${formatPrice(v.price)}</option>`).join("");
+
+  // prefill from ?id= if arriving from a "View details" / "Enquire" link
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  if (id && findVehicle(id)){
+    vehicleSelect.value = id;
+    document.getElementById("cfReason").value = "A specific vehicle";
+    document.getElementById("formTitle").textContent = "Ask about the " + findVehicle(id).make + " " + findVehicle(id).model;
+    document.getElementById("formSub").textContent = "This vehicle is pre-selected below — add any details and we'll follow up.";
+  }
+
+  document.getElementById("contactForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    document.getElementById("contactForm").style.display = "none";
+    document.getElementById("formSuccess").style.display = "block";
+  });
+
+  // simple schematic "map" — a stylized street grid rather than a real map tile,
+  // since no live map service is wired up in this static build
+  document.getElementById("mapShell").innerHTML = `
+    <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+      <rect width="400" height="300" fill="var(--bg-alt)"/>
+      <g stroke="var(--glass-border)" stroke-width="1.5">
+        <path d="M0 60h400M0 140h400M0 220h400"/>
+        <path d="M80 0v300M180 0v300M300 0v300"/>
+      </g>
+      <circle cx="180" cy="140" r="9" fill="var(--red)"/>
+      <circle cx="180" cy="140" r="18" fill="none" stroke="var(--red)" stroke-width="1.5" opacity="0.5"/>
+      <text x="196" y="136" fill="var(--text-dim)" font-family="JetBrains Mono, monospace" font-size="11">DALLAS MOTORS</text>
+      <text x="196" y="150" fill="var(--text-faint)" font-family="JetBrains Mono, monospace" font-size="10">Constitution Ave, Abuja</text>
+    </svg>`;
+
+  const socials = ["facebook","instagram","xsocial","youtube"];
+  document.getElementById("footerSocial").innerHTML = socials.map(s => `<a href="#" aria-label="${s}">${ICON[s]}</a>`).join("");
+</script>
+</body>
+</html>
